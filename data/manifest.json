@@ -1,0 +1,127 @@
+{
+  "master_seed": 2026,
+  "n_scanners": 10,
+  "n_reference_per_scanner": 5,
+  "n_random_per_scanner": 30,
+  "split_by_scanner": {
+    "0": "train",
+    "1": "train",
+    "2": "train",
+    "3": "train",
+    "4": "train",
+    "5": "train",
+    "6": "val",
+    "7": "val",
+    "8": "test",
+    "9": "test"
+  },
+  "fault_probabilities": {
+    "none": 0.25,
+    "ring": 0.15,
+    "hu_drift": 0.15,
+    "blur": 0.15,
+    "cupping": 0.15,
+    "tube_decl": 0.15
+  },
+  "fault_ranges": {
+    "ring": {
+      "low": 0.002,
+      "high": 0.06,
+      "log_uniform": true,
+      "unit": "gain error (fraction)"
+    },
+    "hu_drift": {
+      "low": 1.0,
+      "high": 15.0,
+      "log_uniform": false,
+      "unit": "HU shift (magnitude)"
+    },
+    "blur": {
+      "low": 0.2,
+      "high": 2.0,
+      "log_uniform": false,
+      "unit": "extra blur sigma (channels)"
+    },
+    "cupping": {
+      "low": 0.002,
+      "high": 0.06,
+      "log_uniform": true,
+      "unit": "beam-hardening k"
+    },
+    "tube_decl": {
+      "low": 0.15,
+      "high": 0.9,
+      "log_uniform": false,
+      "unit": "remaining tube output (fraction)"
+    }
+  },
+  "scanner_properties": {
+    "0": {
+      "I0": 138299.10564771062,
+      "hu_offset": 1.62362896488666,
+      "blur_base": 0.22105704411085347
+    },
+    "1": {
+      "I0": 123240.18536385942,
+      "hu_offset": -0.6597074295897158,
+      "blur_base": 0.07665520440055769
+    },
+    "2": {
+      "I0": 117015.97879965893,
+      "hu_offset": 1.557326071363336,
+      "blur_base": 0.22891194417757393
+    },
+    "3": {
+      "I0": 98877.11727617645,
+      "hu_offset": -0.24699649353000874,
+      "blur_base": 0.23785951190884297
+    },
+    "4": {
+      "I0": 99711.52250720715,
+      "hu_offset": -0.14124541195900456,
+      "blur_base": 0.2795671664879308
+    },
+    "5": {
+      "I0": 75173.898007455,
+      "hu_offset": 1.9407332769385208,
+      "blur_base": 0.36500330044922635
+    },
+    "6": {
+      "I0": 67301.88284758807,
+      "hu_offset": -0.51036027961066,
+      "blur_base": 0.3070406697223037
+    },
+    "7": {
+      "I0": 110903.83233941154,
+      "hu_offset": 1.2435874756721046,
+      "blur_base": 0.2184917515442874
+    },
+    "8": {
+      "I0": 98578.04381866154,
+      "hu_offset": 1.5687728233841451,
+      "blur_base": 0.29906896756146867
+    },
+    "9": {
+      "I0": 114056.28917658499,
+      "hu_offset": -0.6140938224651395,
+      "blur_base": 0.378250201574417
+    }
+  },
+  "metrics": [
+    "mean_hu",
+    "noise_hu",
+    "unif_hu",
+    "ring_hu",
+    "ring_norm",
+    "edge_px"
+  ],
+  "simulator_limitations": "parallel-beam, monoenergetic, no scatter, no electronic noise, empirical beam hardening",
+  "software": {
+    "python": "3.14.2",
+    "numpy": "2.4.1",
+    "scikit-image": "0.26.0"
+  },
+  "csv_file": "qa_dataset.csv",
+  "csv_sha256": "5869dcf2c3ad92a8b5fcc42709b3525bd7e56bd8b505ea0bb548c93137c86b64",
+  "generated_unix_time": 1790792160
+}
